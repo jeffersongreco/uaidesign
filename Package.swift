@@ -13,11 +13,16 @@ let package = Package(
             targets: ["uaidesign"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swiftui-library/hstack-snap-to-scroll", .upToNextMajor(from: "1.0.0")),
+        
     ],
     targets: [
         .target(
             name: "uaidesign",
-            dependencies: []),
+            dependencies: [
+                
+            ],
+            resources: [
+                
+            ]),
     ]
 )
