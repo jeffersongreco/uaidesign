@@ -2,13 +2,13 @@ import SwiftUI
 
 //
 
-struct UaiSnapCarousel: View {
+public struct UaiSnapCarousel: View {
     
     @ObservedObject var viewModel: ImagesViewModel
     
     @State var currentIndex: Int = 0
     
-    var body: some View {
+    public var body: some View {
         
         SnapCarousel(index: $currentIndex, items: viewModel.images, content: { image in
             
