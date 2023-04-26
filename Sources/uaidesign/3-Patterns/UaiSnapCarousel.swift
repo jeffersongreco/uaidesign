@@ -5,6 +5,12 @@ import SwiftUI
 public struct UaiSnapCarousel: View {
     
     @ObservedObject var viewModel: ImagesViewModel
+    var url: String
+    
+    init(viewModel: ImagesViewModel, url: String) {
+        self.viewModel = viewModel
+        self.url = url
+    }
     
     @State var currentIndex: Int = 0
     
@@ -32,7 +38,7 @@ public struct UaiSnapCarousel: View {
             }
         })
         .onAppear{
-            viewModel.getImages()
+            ImagesViewModel(apiURL: url).getImages()
         }
     }
 }
